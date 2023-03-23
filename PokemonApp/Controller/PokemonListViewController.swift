@@ -55,9 +55,9 @@ extension PokemonListViewController: UITableViewDelegate, UITableViewDataSource 
         if let cell = tableView.dequeueReusableCell(withIdentifier: PokemonListViewCell.name) as? PokemonListViewCell {
             cell.viewModel = PokemonDetailViewViewModel(pokemon: viewModel.getDetails(index: indexPath.row))
             
-            if viewModel.mustRefreshPage(with: indexPath.row) {
-                viewModel.fetchPokemons()
-            }
+//            if viewModel.mustRefreshPage(with: indexPath.row) {
+//                viewModel.fetchPokemons()
+//            }
             
             return cell
         }

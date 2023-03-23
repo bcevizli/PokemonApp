@@ -67,7 +67,7 @@ class PokemonListViewViewModel {
         }
     }
     
-    final func mustRefreshPage(with index: Int) -> Bool {
-        return index == count - 10 && pokemonList?.count ?? 0 > count
-    }
+//    final func mustRefreshPage(with index: Int) -> Bool {
+//        return index == count - 10 && pokemonList?.count ?? 0 > count
+//    }
 }

@@ -19,7 +19,7 @@ class PokemonDetailViewController: UIViewController {
         let label = UILabel()
         label.numberOfLines = 0
         label.sizeToFit()
-        label.textColor = UIColor.yellow
+        label.textColor = UIColor.white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 18)
