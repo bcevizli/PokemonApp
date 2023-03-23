@@ -26,9 +26,10 @@ class PokemonListViewViewModel {
         networkService.request(request) { [weak self] result in
             switch result {
             case .success(let list):
-                self?.count = (self?.count ?? 0) + (list?.results?.count ?? 0)
-                self?.pokemonList = list
-                self?.getPokemonDetails(pokemonArray: list?.results)
+                guard let self = self else { return }
+                self.count = (self.count) + (list?.results?.count ?? 0)
+                self.pokemonList = list
+                self.getPokemonDetails(pokemonArray: list?.results)
             case .failure(let error):
                 debugPrint("error \(error)")
             }
