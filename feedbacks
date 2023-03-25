@@ -1,0 +1,17 @@
+Networking Layer’ında bir httpclient kullanabilirsin. (Alamofire) işleri daha da rahatlatmak istersen (Moya)
+
+Her servisi PokeRequest protokolü ile extend etmen mantıklı fakat her service için ayrı decode metodu yazmışsın. Buna duplicated kod denir. Her servis için ortak bir decode metodu olmalıdır. Şu anki durumda PokeRequest protokolü içerisindeki decode metodunun bir manası yok.
+
+Tüm pokemonları fetchledikten sonra tüm pokemonların detaylarını da fetchlemişsin, bunun amacı sanıyorum pokemon image’larını almak. Fakat bu iki çağrıyı daha mantıklı bir düzleme oturtmalıyız. Mesela;
+
+Tüm pokemonlar çekilir
+İsimleri tabloda yazmaya baslar.
+Eğer pokemon ismi ekranda ise ilgili pokemonun image’ı çekilir.
+Pokemon ismi henüz ekrana gelmediyse bu pokemon image’ına ihtiyacım yok.
+Çekilen image, table’ı reload eden dataya eklenir.
+
+Şu an 40-50 pokemonla bir sıkıntı yaşamıyor olabilirsin ama 10.000 adet pokemon fetchlediğini düşündüğünde app 10.000 adet çağrıya art arda çıkacak.
+
+Yukarıda bahsettiğim olay sebebiyle bir delegate methodu tanımlamışsın => didGetAllPokemonDetails. Uygulama logiciğini gözden geçirirsen buna ihtiyaç olmadığını göreceksin.
+
+ImageProvider olarak Kingfisher kullanabilirsin. Apple’ın kendi metodu hiç lightweight değil.
