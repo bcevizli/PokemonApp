@@ -65,7 +65,7 @@ class PokemonListViewCell: UITableViewCell {
     }
     
     func populateCell() {
-        imgPokemon.image(from: viewModel?.getImageUrl() ?? "", placeHolder: UIImage(systemName: "house")!)
+        imgPokemon.image(from: viewModel?.getImageUrl() ?? "", placeHolder: UIImage(systemName: "photo")!)
         lblPokemon.text = viewModel?.getName()
     }
 }
