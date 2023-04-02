@@ -9,7 +9,7 @@ import UIKit
 
 class PokemonDetailViewController: UIViewController {
     
-    private var viewModel: PokemonDetailViewViewModel?
+    private var viewModel: PokemonDetailViewModel?
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
@@ -32,7 +32,7 @@ class PokemonDetailViewController: UIViewController {
     }
     
     func setup(with pokemon: PokemonDetail) {
-        viewModel = PokemonDetailViewViewModel(pokemon: pokemon)
+        viewModel = PokemonDetailViewModel(pokemon: pokemon)
     }
     
     private func initPage() {

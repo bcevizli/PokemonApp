@@ -8,7 +8,7 @@
 import UIKit
 
 class PokemonListViewController: UIViewController {
-
+    
     private let viewModel = PokemonListViewViewModel()
     private var tableView: UITableView!
     
@@ -52,17 +52,16 @@ extension PokemonListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: PokemonListViewCell.name) as? PokemonListViewCell {
-            cell.viewModel = PokemonDetailViewViewModel(pokemon: viewModel.getDetails(index: indexPath.row))
-            
-//            if viewModel.mustRefreshPage(with: indexPath.row) {
-//                viewModel.fetchPokemons()
-//            }
-            
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PokemonListViewCell.name) as? PokemonListViewCell else {
+            return UITableViewCell()
+        }
+        cell.viewModel = PokemonDetailViewModel(pokemon: viewModel.getDetails(index: indexPath.row))
+        
+        if viewModel.mustRefreshPage(with: indexPath.row) {
+            viewModel.fetchPokemons()
         }
         
-        return UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

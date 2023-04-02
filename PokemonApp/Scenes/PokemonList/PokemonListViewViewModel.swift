@@ -15,7 +15,7 @@ protocol PokemonListViewViewModelDelegate: AnyObject {
 class PokemonListViewViewModel {
     var delegate: PokemonListViewViewModelDelegate?
     
-    var pokemonList: GetAllPokemons?
+    var pokemonList: AllPokemons?
     private var pokemonsDetailsArray = [PokemonDetail]()
     private let networkService = Service()
     private (set) var count = 0
@@ -68,7 +68,7 @@ class PokemonListViewViewModel {
         }
     }
     
-//    final func mustRefreshPage(with index: Int) -> Bool {
-//        return index == count - 10 && pokemonList?.count ?? 0 > count
-//    }
+    final func mustRefreshPage(with index: Int) -> Bool {
+        return index == count - 10 && pokemonList?.count ?? 0 > count
+    }
 }

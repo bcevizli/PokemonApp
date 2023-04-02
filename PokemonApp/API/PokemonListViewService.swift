@@ -34,9 +34,9 @@ struct PokemonListViewService: PokeRequest {
         }
     }
     
-    func decode(_ data: Data) throws -> GetAllPokemons? {
+    func decode(_ data: Data) throws -> AllPokemons? {
         let decoder = JSONDecoder()
-        let response = try decoder.decode(GetAllPokemons.self, from: data)
+        let response = try decoder.decode(AllPokemons.self, from: data)
         return response
     }
     

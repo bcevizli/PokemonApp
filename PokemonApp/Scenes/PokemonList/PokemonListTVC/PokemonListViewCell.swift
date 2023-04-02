@@ -17,7 +17,7 @@ class PokemonListViewCell: UITableViewCell {
         return label
     }()
     
-    var viewModel: PokemonDetailViewViewModel? {
+    var viewModel: PokemonDetailViewModel? {
         didSet {
             populateCell()
         }

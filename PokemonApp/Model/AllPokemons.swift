@@ -1,5 +1,5 @@
 //
-//  GetAllPokemons.swift
+//  AllPokemons.swift
 //  PokemonApp
 //
 //  Created by Adem Burak Cevizli on 23.03.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetAllPokemons: Codable {
+struct AllPokemons: Codable {
     
     let count: Int?
     let next: String?
