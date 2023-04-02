@@ -11,12 +11,7 @@ class PokemonListViewCell: UITableViewCell {
     static let name = String(describing: PokemonListViewCell.self)
     
     private var imgPokemon: UIImageView!
-    private var lblPokemon: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "Helvetica-Bold", size: 60)
-        return label
-    }()
-    
+    private var lblPokemon = UILabel()
     var viewModel: PokemonDetailViewModel? {
         didSet {
             populateCell()
@@ -57,6 +52,7 @@ class PokemonListViewCell: UITableViewCell {
         imgPokemon.contentMode = .scaleAspectFit
         
         lblPokemon.translatesAutoresizingMaskIntoConstraints = false
+        lblPokemon.font = UIFont.systemFont(ofSize: 25)
         lblPokemon.heightAnchor.constraint(equalToConstant: 40).isActive = true
         lblPokemon.leadingAnchor.constraint(equalTo: imgPokemon.trailingAnchor, constant: 10).isActive = true
         lblPokemon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10).isActive = true
