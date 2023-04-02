@@ -32,7 +32,7 @@ class PokemonListViewCell: UITableViewCell {
         super.prepareForReuse()
         imgPokemon.image = nil
     }
-
+    
     func createCell() {
         
         self.selectionStyle = .none

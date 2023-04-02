@@ -57,9 +57,9 @@ extension PokemonListViewController: UITableViewDelegate, UITableViewDataSource 
         }
         cell.viewModel = PokemonDetailViewModel(pokemon: viewModel.getDetails(index: indexPath.row))
         
-//        if viewModel.mustRefreshPage(with: indexPath.row) {
-//            viewModel.fetchPokemons()
-//        }
+        //        if viewModel.mustRefreshPage(with: indexPath.row) {
+        //            viewModel.fetchPokemons()
+        //        }
         
         return cell
     }

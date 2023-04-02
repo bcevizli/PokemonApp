@@ -10,9 +10,7 @@ import Foundation
 struct PokemonDetailService: PokeRequest {
         
     var api = "pokemon"
-    
     var url: String
-    
     var method: HTTPMethod {
         .get
     }
@@ -29,6 +27,5 @@ struct PokemonDetailService: PokeRequest {
         let response = try decoder.decode(PokemonDetail.self, from: data)
         return response
     }
-    
 }
 

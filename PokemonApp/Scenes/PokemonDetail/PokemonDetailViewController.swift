@@ -10,11 +10,10 @@ import UIKit
 class PokemonDetailViewController: UIViewController {
     
     private var viewModel: PokemonDetailViewModel?
-    
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private let imgPokemon = UIImageView()
-        
+    
     private let detailsLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -70,7 +69,7 @@ class PokemonDetailViewController: UIViewController {
         imgPokemon.widthAnchor.constraint(equalToConstant: 300).isActive = true
         
         imgPokemon.image(from: viewModel?.getImageUrl() ?? "",
-                                      placeHolder: UIImage(systemName: "photo")!)
+                         placeHolder: UIImage(systemName: "photo")!)
         
         contentView.addSubview(detailsLabel)
         detailsLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true

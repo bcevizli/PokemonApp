@@ -19,9 +19,7 @@ struct PokemonListViewService: PokeRequest {
     }
     
     var url: String
-    
     var api = "pokemon"
-        
     var method: HTTPMethod {
         .get
     }
@@ -49,7 +47,6 @@ struct PokemonListViewService: PokeRequest {
         }
         return urlComps.url?.absoluteString ?? ""
     }
-    
 }
 
 struct Pagination {

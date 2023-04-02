@@ -5,7 +5,6 @@
 //  Created by Adem Burak Cevizli on 23.03.2023.
 //
 
-import Foundation
 import UIKit
 
 protocol PokemonListViewViewModelDelegate: AnyObject {
@@ -68,7 +67,7 @@ class PokemonListViewViewModel {
         }
     }
     
-//    final func mustRefreshPage(with index: Int) -> Bool {
-//        return index == count - 10 && pokemonList?.count ?? 0 > count
-//    }
+    //    final func mustRefreshPage(with index: Int) -> Bool {
+    //        return index == count - 10 && pokemonList?.count ?? 0 > count
+    //    }
 }

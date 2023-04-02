@@ -5,7 +5,6 @@
 //  Created by Adem Burak Cevizli on 23.03.2023.
 //
 
-import Foundation
 import UIKit
 
 class PokemonDetailViewModel {
