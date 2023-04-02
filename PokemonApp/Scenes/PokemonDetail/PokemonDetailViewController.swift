@@ -70,7 +70,7 @@ class PokemonDetailViewController: UIViewController {
         imgPokemon.widthAnchor.constraint(equalToConstant: 300).isActive = true
         
         imgPokemon.image(from: viewModel?.getImageUrl() ?? "",
-                                      placeHolder: UIImage(systemName: "house")!)
+                                      placeHolder: UIImage(systemName: "photo")!)
         
         contentView.addSubview(detailsLabel)
         detailsLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
